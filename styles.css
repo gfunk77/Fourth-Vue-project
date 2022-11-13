@@ -37,7 +37,7 @@ input {
   margin: 1rem auto;
   width: 50%;
 }
-p {
+.container > p {
   background-color: #00473e;
   width: 50%;
   margin: 1rem auto;
@@ -57,4 +57,17 @@ button {
   font-family: inherit;
   text-transform: capitalize;
   color: #00473e;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #00473e;
+}
+.box p {
+  padding: 37px 0;
+}
+.boxes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
