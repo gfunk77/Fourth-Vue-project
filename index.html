@@ -24,21 +24,35 @@
 
         <div
           @click="boxSelected(1)"
-          :style="{backgroundColor: box1 ? '#fa5246' : 'blue', borderColor: 'transparent'}"
+          :style="{backgroundColor: box1 ? '#fa5246' : '#faae2b', borderColor: 'transparent'}"
           class="box"
         >
-          1
+          Click Me: 1
         </div>
         <div
           :class="{default: true, active: box2}"
           @click="boxSelected(2)"
           class="box"
         >
-          2
+          Click Me: 2
         </div>
-        <div class="box">3</div>
-        <div class="box">4</div>
-        <div class="box">5</div>
+        <div
+          :class="['default', {active: box3}]"
+          @click="boxSelected(3)"
+          class="box"
+        >
+          Click Me: 3
+        </div>
+        <div
+          :class="{active: box4}"
+          @click="boxSelected(4)"
+          class="box default"
+        >
+          Click Me: 4
+        </div>
+        <div :class="boxClasses" @click="boxSelected(5)" class="box">
+          Click Me: 5
+        </div>
       </div>
     </section>
   </body>

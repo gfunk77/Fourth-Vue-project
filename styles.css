@@ -65,13 +65,16 @@ button {
   padding: 2rem;
   margin: 1.5rem auto;
   width: calc(100% - 32px);
+  font-weight: bold;
+  font-size: large;
 }
 
 .styleMe {
   background-color: #ffa8ba;
 }
 .default {
-  background-color: blue;
+  background-color: #faae2b;
+  border-color: transparent;
 }
 .active {
   background-color: #fa5246;

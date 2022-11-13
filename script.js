@@ -8,7 +8,11 @@ const app = Vue.createApp({
       box5: false,
     };
   },
-  computed: {},
+  computed: {
+    boxClasses() {
+      return ["default", { active: this.box5 }];
+    },
+  },
   methods: {
     boxSelected(box) {
       if (box === 1) {
