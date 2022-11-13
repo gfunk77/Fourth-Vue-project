@@ -37,9 +37,9 @@ input {
   margin: 1rem auto;
   width: 50%;
 }
-.container > p {
+.container p {
   background-color: #00473e;
-  width: 50%;
+  width: 75%;
   margin: 1rem auto;
   padding: 0.5rem;
   font-weight: 700;
@@ -57,17 +57,23 @@ button {
   font-family: inherit;
   text-transform: capitalize;
   color: #00473e;
+  cursor: pointer;
 }
 .box {
-  width: 100px;
-  height: 100px;
   border: 2px solid #00473e;
+  text-align: center;
+  padding: 2rem;
+  margin: 1.5rem auto;
+  width: calc(100% - 32px);
 }
-.box p {
-  padding: 37px 0;
+
+.styleMe {
+  background-color: #ffa8ba;
 }
-.boxes {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+.default {
+  background-color: blue;
+}
+.active {
+  background-color: #fa5246;
+  border-color: transparent;
 }
