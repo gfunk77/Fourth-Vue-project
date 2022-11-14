@@ -1,6 +1,9 @@
 const app = Vue.createApp({
   data() {
     return {
+      boxContainerIsVisible: true,
+      inlineStyle: "",
+      userInput: "",
       box1: false,
       box2: false,
       box3: false,
@@ -9,11 +12,20 @@ const app = Vue.createApp({
     };
   },
   computed: {
+    visible() {
+      return {
+        visible: this.boxContainerIsVisible,
+        hidden: !this.boxContainerIsVisible,
+      };
+    },
     boxClasses() {
       return ["default", { active: this.box5 }];
     },
   },
   methods: {
+    toggleVisibility() {
+      this.boxContainerIsVisible = !this.boxContainerIsVisible;
+    },
     boxSelected(box) {
       if (box === 1) {
         this.box1 = !this.box1;

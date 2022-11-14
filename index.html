@@ -16,42 +16,45 @@
         <h1>Vue Styling</h1>
       </header>
       <div class="container">
-        <input type="text" />
-        <p>Style Me</p>
-        <button>toggle</button>
-        <input type="text" />
-        <p>style inline</p>
-
-        <div
-          @click="boxSelected(1)"
-          :style="{backgroundColor: box1 ? '#fa5246' : '#faae2b', borderColor: 'transparent'}"
-          class="box"
-        >
-          Click Me: 1
-        </div>
-        <div
-          :class="{default: true, active: box2}"
-          @click="boxSelected(2)"
-          class="box"
-        >
-          Click Me: 2
-        </div>
-        <div
-          :class="['default', {active: box3}]"
-          @click="boxSelected(3)"
-          class="box"
-        >
-          Click Me: 3
-        </div>
-        <div
-          :class="{active: box4}"
-          @click="boxSelected(4)"
-          class="box default"
-        >
-          Click Me: 4
-        </div>
-        <div :class="boxClasses" @click="boxSelected(5)" class="box">
-          Click Me: 5
+        <input placeholder="type 'active'" v-model="userInput" type="text" />
+        <p :class="userInput" class="styleMe">Style Me</p>
+        <button @click="toggleVisibility">toggle</button>
+        <input placeholder="type a color" v-model="inlineStyle" type="text" />
+        <p :style="{backgroundColor: inlineStyle}" class="styleMe">
+          style inline
+        </p>
+        <div :class="visible" class="box-container">
+          <div
+            @click="boxSelected(1)"
+            :style="{backgroundColor: box1 ? '#fa5246' : '#faae2b', borderColor: 'transparent'}"
+            class="box"
+          >
+            Click Me: 1
+          </div>
+          <div
+            :class="{default: true, active: box2}"
+            @click="boxSelected(2)"
+            class="box"
+          >
+            Click Me: 2
+          </div>
+          <div
+            :class="['default', {active: box3}]"
+            @click="boxSelected(3)"
+            class="box"
+          >
+            Click Me: 3
+          </div>
+          <div
+            :class="{active: box4}"
+            @click="boxSelected(4)"
+            class="box default"
+          >
+            Click Me: 4
+          </div>
+          <div :class="boxClasses" @click="boxSelected(5)" class="box">
+            Click Me: 5
+          </div>
         </div>
       </div>
     </section>

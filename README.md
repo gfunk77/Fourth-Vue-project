@@ -11,3 +11,9 @@ box3 - :class uses an array to hold the possible style options
 box4 - default is added as a permanent class. When box4 is clicked, the active class will toggle on and off.
 
 box5 - use a computed property to check if it is selected. boxClasses returns an array of class options
+
+Style Inline - reads user input and will change to whatever color user types. Works with all color formats.
+
+Toggle - will switch the visibility of all the boxes.
+
+Style me - takes in user input and will apply the 'active' class if 'active' is typed in
